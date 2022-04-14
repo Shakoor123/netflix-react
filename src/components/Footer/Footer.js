@@ -3,7 +3,6 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react/cjs/react.development';
 import './footer.css'
-import RowPost from '../Rowpost/RowPost';
 function Footer() {
     const [val, setVal] = useState();
 
@@ -22,7 +21,7 @@ function Footer() {
     return (
         <div className='container'>
             <h3>Contact Me</h3>
-            <form ref={form} onSubmit={sendEmail} method={RowPost}>
+            <form ref={form} onSubmit={sendEmail}>
                 <div className="boxes">
       <label className='text'>Name</label>
       <input className='box' value={val} type="text" name="name" /><br></br><br/>
